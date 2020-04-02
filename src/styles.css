@@ -46,7 +46,7 @@
 
 .category2 {
     border-top: 2px solid black;
-    margin-top: 20px;
+    padding-top: 20px;
     grid-column: 1 / span 3;
     grid-row: 3;
 }
@@ -56,11 +56,9 @@
     color: rgba(0, 0, 0, 1);
 }
 
-
-
 .category3 {
     border-top: 2px solid black;
-    margin-top: 20px;
+    padding-top: 20px;
     grid-column: 2;
     grid-row: 4;
 }
@@ -153,10 +151,38 @@
 }
 
 /* JOSEY */
+
+.recipe-image {
+    text-align: center;
+    border:2px solid black;
+    border-top: 0px none black;
+}
+
+.recipe-image img {
+    max-height: 400px;
+    width: auto;
+}
+
+.recipe {
+    text-align: justify;
+    padding:20px 100px;
+}
+
+.recipe-table{
+    padding: 20px 100px 40px 100px;
+}
+.recipe-table table{
+    text-align: justify;
+}
+
+
 .footer {
     grid-column: 2;
     grid-row: 5;
     background-color:rgb(63, 63, 63);
+    color: white;
+}
+.footer a{
     color: white;
 }
 
@@ -296,6 +322,16 @@
     background-image: linear-gradient(to bottom, transparent, white);
   }
 
+.show_more {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    text-decoration: none;
+    text-align: right;
+}
+.show_more a{
+    font-weight: 700;
+}
+
 .container {
     max-width: 1200px;
 }
@@ -321,4 +357,17 @@
     .rotd_txt img{
         display: block;
     }
+
+    .recipe-image img {
+        max-height: 300px;
+        width: auto;
+    }
+    
+    .recipe {
+        text-align: justify;
+        padding:20px 20px;
+    }
+
+    .recipe-table{
+        padding: 20px 20px 40px 20px;
 }
