@@ -124,6 +124,10 @@
     border: 3px solid black;
   }
 
+  .home {
+      padding: 0 10px 0 0;
+  }
+
 /* TOM */
 .recipe-category-container {
     grid-row: 3;
@@ -294,6 +298,10 @@
         margin: auto;
         flex-wrap: wrap;
     }
+    .navbar-nav > li{
+        padding-right: 10px;
+    }
+    
 }
 
 /* CHRIS* */
