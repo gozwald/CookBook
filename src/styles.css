@@ -425,5 +425,9 @@
         row-gap: 20px;
         padding: 30px 30px;
    }
+   .navbar-expand .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0; 
+}
 }
 
