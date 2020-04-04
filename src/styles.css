@@ -452,4 +452,7 @@
         .hideme {
             display: block
     }
+        .nav-link {
+            padding: 5px;
+        }
 }
