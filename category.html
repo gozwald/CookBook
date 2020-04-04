@@ -92,19 +92,19 @@
           <div class="hideme"> 
             <ul class="border-top-0 border-left-0 border-right-0 border-dark nav border nav-fill nav-tabs" style="background-color: #94949428;" id="pills-tab" role="tablist"> 
               <li class="nav-item"> 
-                <a class="nav-link active text-dark" id="pills-breakfasttab" data-toggle="pill" href="#breakfasttab" role="tab" aria-controls="breakfasttab" aria-selected="true">BREAKFAST</a> 
+                <a class="nav-link active text-dark" id="pills-breakfasttab" data-toggle="tab" href="#breakfasttab" role="tab" aria-controls="breakfasttab" aria-selected="true">BREAKFAST</a> 
               </li>                         
               <li class="nav-item"> 
-                <a class="nav-link text-dark" id="pills-lunchtab" data-toggle="pill" href="#lunchtab" role="tab" aria-controls="lunchtab" aria-selected="false">LUNCH</a> 
+                <a class="nav-link text-dark" id="pills-lunchtab" data-toggle="tab" href="#lunchtab" role="tab" aria-controls="lunchtab" aria-selected="false">LUNCH</a> 
               </li>                         
               <li class="nav-item"> 
-                <a class="nav-link text-dark" id="pills-dinnertab" data-toggle="pill" href="#dinnertab" role="tab" aria-controls="dinnertab" aria-selected="false">DINNER</a> 
+                <a class="nav-link text-dark" id="pills-dinnertab" data-toggle="tab" href="#dinnertab" role="tab" aria-controls="dinnertab" aria-selected="false">DINNER</a> 
               </li>                         
               <li class="nav-item"> 
-                <a class="nav-link text-dark" id="pills-desserttab" data-toggle="pill" href="#desserttab" role="tab" aria-controls="desserttab" aria-selected="false">DESSERT</a> 
+                <a class="nav-link text-dark" id="pills-desserttab" data-toggle="tab" href="#desserttab" role="tab" aria-controls="desserttab" aria-selected="false">DESSERT</a> 
               </li>                         
               <li class="nav-item"> 
-                <a class="nav-link text-dark" id="pills-snacktab" data-toggle="pill" href="#snacktab" role="tab" aria-controls="snacktab" aria-selected="false">SNACK</a> 
+                <a class="nav-link text-dark" id="pills-snacktab" data-toggle="tab" href="#snacktab" role="tab" aria-controls="snacktab" aria-selected="false">SNACK</a> 
               </li>                         
             </ul>                     
             <div class="tab-content small" id="pills-tabContent"> 
@@ -386,6 +386,21 @@
           next.children(':first-child').clone().appendTo($(this));
           }
       });
+
+      $('a[data-toggle="tab"]').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+});
+
+$('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+    var id = $(e.target).attr("href");
+    localStorage.setItem('selectedTab', id)
+});
+
+var selectedTab = localStorage.getItem('selectedTab');
+if (selectedTab != null) {
+    $('a[data-toggle="tab"][href="' + selectedTab + '"]').tab('show');
+}
       </script>
     </body>
     </html>
