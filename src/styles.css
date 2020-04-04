@@ -450,6 +450,6 @@
 
 @media (max-width:590px) {
         .hideme {
-            display: grid
+            display: block
     }
 }
