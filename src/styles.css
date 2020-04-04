@@ -431,3 +431,25 @@
 }
 }
 
+.showme {
+    display: block;
+}
+
+.hideme {
+    display: none;
+}
+
+
+@media (max-width:590px) {
+        
+        .showme {
+            display: none
+        }
+    }
+
+
+@media (max-width:590px) {
+        .hideme {
+            display: block
+    }
+}
